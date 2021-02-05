@@ -1,14 +1,18 @@
 import React from 'react';
+
+import {Card} from '../card/card-component';
+
 import './card-list-style.css';
 
 
 
 export const CardList = ( props ) => {
-    console.log(props.children);
     return(
         <>
             <div className="card-list">
-                {props.children}
+               {props.badGuys.map( badGuy => (
+                   <Card key={badGuy.id} badGuy={badGuy}/>
+               ) )}
             </div>
         </>
     )
