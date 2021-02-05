@@ -15,13 +15,14 @@ class App extends Component {
       ]
     }
   };
-
+  
   componentDidMount() {
     fetch('http://jsonplaceholder.typicode.com/users')
     .then( response => response.json()) 
     .then( guys => this.setState( {badGuys: guys})) 
   }
 
+  
   render() {
     return (
       <div className="wrapper">

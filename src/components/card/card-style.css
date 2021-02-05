@@ -11,3 +11,12 @@
 .card-container:hover {
     transform: scale(1.05);
 }
+
+.card-container > img {
+    max-width: 200px;
+}
+
+.bad-guy-info {
+    margin-top: 10px;
+    border-top: 1px solid grey;
+}
