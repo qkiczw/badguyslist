@@ -9,9 +9,7 @@ class App extends Component {
 
     this.state = {
       badGuys: [
-        {id: "as", name: 'Frankenstein'},
-        {id: "cb", name: 'Dracula'},
-        {id: "fg", name: 'Zombie'}, 
+      
       ]
     }
   };
