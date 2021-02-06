@@ -4,7 +4,6 @@ import './card-style.css'
 
 
 export const Card = ( props ) => {
-    console.log(props.badGuy)
     return(
     <div className="card-container"> 
         <img alt={`Bad guy named ${props.badGuy.name}`} src={`https://robohash.org/${props.badGuy.id}set=set2`}/>
