@@ -1,7 +1,11 @@
 .card-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #95dada;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fpolice-mugshot-vector-police-lineup-isolated-white-background-illustration-wall-metrical-imperial-prison-template-94555169.jpg&f=1&nofb=1');
+    background-size: cover;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
@@ -14,6 +18,7 @@
 
 .card-container > img {
     max-width: 200px;
+    transition-duration: 0.5s;
 }
 
 .bad-guy-info {
