@@ -21,10 +21,14 @@ class App extends Component {
 
   
   render() {
+
+    const { badGuys, searchField } = this.state;
+    const filterBadGuys = badGuys.filter( guy => guy.name.toLowerCase().includes(searchField.toLowerCase()));
+
     return (
       <div className="wrapper">
         <input className="search-field" onChange={ e => this.setState({searchField: e.target.value})} type="text" placeholder={`find a bad guy`}/>
-        <CardList badGuys={this.state.badGuys} />
+        <CardList badGuys={filterBadGuys} />
       </div>
     )
   }
