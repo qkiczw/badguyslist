@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
+import {Header} from './components/header/header-component';
 import {CardList} from './components/card-list/card-list-component';
 import {SearchBox} from './components/search-box/search-box-component';
 
@@ -30,6 +31,7 @@ class App extends Component {
 
     return (
       <div className="wrapper">
+        <Header title={'Bad Guys List'} />
         <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
         <CardList badGuys={filteredBadGuys} />
       </div>
