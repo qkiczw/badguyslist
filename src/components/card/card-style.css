@@ -17,7 +17,7 @@
 }
 
 .card-container > img {
-    max-width: 200px;
+    max-width: 100%;
     transition-duration: 0.5s;
 }
 .card-container > h2 {
