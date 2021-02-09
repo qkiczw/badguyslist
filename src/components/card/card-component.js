@@ -13,6 +13,9 @@ export const Card = ( props ) => {
             <p><strong>Gang:</strong> {props.badGuy.company.name}</p>
             <p><strong>City:</strong> {props.badGuy.address.city}</p>
         </div>
+        <div className="buttons">
+            <button className="release-btn" onClick={()=> props.handleRelease(props.badGuy.id)}>Release</button>
+        </div>
     </div>
     )
 };

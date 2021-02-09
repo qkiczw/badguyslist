@@ -9,7 +9,6 @@
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
-    cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 .card-container:hover {
@@ -28,4 +27,19 @@
 .bad-guy-info {
     margin-top: 10px;
     border-top: 1px solid grey;
+}
+.buttons {
+    width: 100%;
+}
+.release-btn {
+    margin: 20px 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ef5350;
+    color: #fff;
+    cursor: pointer;
+}
+.release-btn:hover {
+    background-color: #e53935;
 }

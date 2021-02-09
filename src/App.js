@@ -22,6 +22,11 @@ class App extends Component {
   }
 
   filterBadGuys = e => this.setState( { searchField: e.target.value } )
+ 
+  releaseBadGuy = ( id ) => {
+    const released = id;
+    this.setState( {badGuys: this.state.badGuys.filter( guy => guy.id !== released)});
+  }
   
   
   render() {
@@ -33,7 +38,7 @@ class App extends Component {
       <div className="wrapper">
         <Header title={'Bad Guys List'} />
         <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
-        <CardList badGuys={filteredBadGuys} />
+        <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
       </div>
     )
   }
