@@ -20,16 +20,18 @@ class App extends Component {
     .then( guys => this.setState( {badGuys: guys})) 
   }
 
+  filterBadGuys = e => this.setState( { searchField: e.target.value } )
+  
   
   render() {
 
     const { badGuys, searchField } = this.state;
-    const filterBadGuys = badGuys.filter( guy => guy.name.toLowerCase().includes(searchField.toLowerCase()));
+    const filteredBadGuys = badGuys.filter( guy => guy.name.toLowerCase().includes(searchField.toLowerCase()));
 
     return (
       <div className="wrapper">
-        <SearchBox  placeholder={`Enter a guy name`} handleChange={ e => this.setState({ searchField: e.target.value }) }/>
-        <CardList badGuys={filterBadGuys} />
+        <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
+        <CardList badGuys={filteredBadGuys} />
       </div>
     )
   }
