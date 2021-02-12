@@ -29,6 +29,26 @@ class App extends Component {
     this.setState( {badGuys: this.state.badGuys.filter( guy => guy.id !== released)});
   }
   
+  addGuyHandler = (e) => {
+    e.preventDefault();
+    let newGuyname = e.target.name.value;
+    let newGuyCity = e.target.city.value;
+    let newGuyGang = e.target.gang.value;
+    
+    const newGuyObj = {
+      id: this.state.badGuys.length + 1 ,
+      name: newGuyname,
+      address: {
+        city: newGuyCity
+      },
+      company: {
+        name: newGuyGang
+      }
+    }
+    console.log(newGuyObj)
+    this.setState({ badguys: this.state.badGuys.push(newGuyObj)})
+  }
+  
   
   render() {
 
@@ -40,7 +60,7 @@ class App extends Component {
         <Header title={'Bad Guys List'} />
         <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
         <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
-        <AddGuy />
+        <AddGuy addGuy={this.addGuyHandler}/>
       </div>
     )
   }
