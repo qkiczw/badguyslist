@@ -4,6 +4,7 @@ import './App.css';
 import {Header} from './components/header/header-component';
 import {CardList} from './components/card-list/card-list-component';
 import {SearchBox} from './components/search-box/search-box-component';
+import {AddGuy} from './components/add-guy/Add-guy-component';
 
 class App extends Component {
   constructor() {
@@ -39,6 +40,7 @@ class App extends Component {
         <Header title={'Bad Guys List'} />
         <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
         <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
+        <AddGuy />
       </div>
     )
   }
