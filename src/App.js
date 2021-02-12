@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       badGuys: [],
-      searchField: ''
+      searchField: '',
     }
   };
   
@@ -31,22 +31,23 @@ class App extends Component {
   
   addGuyHandler = (e) => {
     e.preventDefault();
-    let newGuyname = e.target.name.value;
-    let newGuyCity = e.target.city.value;
-    let newGuyGang = e.target.gang.value;
-    
+
     const newGuyObj = {
       id: this.state.badGuys.length + 1 ,
-      name: newGuyname,
+      name: e.target.name.value,
       address: {
-        city: newGuyCity
+        city: e.target.city.value
       },
       company: {
-        name: newGuyGang
+        name: e.target.gang.value
       }
     }
-    console.log(newGuyObj)
-    this.setState({ badguys: this.state.badGuys.push(newGuyObj)})
+    this.setState({ badguys: this.state.badGuys.push(newGuyObj)});
+
+    e.target.name.value = "";
+    e.target.city.value = "";
+    e.target.gang.value = "";
+ 
   }
   
   
