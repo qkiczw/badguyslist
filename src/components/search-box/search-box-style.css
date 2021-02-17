@@ -20,3 +20,8 @@
         border-radius: 5px;
       }
   }
+  @media screen and (min-width: 768px) {
+    .search-container {
+      flex-direction: row;
+    }
+  }

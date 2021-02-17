@@ -19,9 +19,18 @@
     border: none;
     border-radius: 5px;
 }
-.add-guy-form > button {
+.add-guy-form > .addBtn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: lightgreen;
+}
+.addBtn:hover {
+    background-color: #359235;
+}
+
+@media screen and (min-width: 768px) {
+    .add-guy-form {
+        flex-direction: row;
+    }
 }

@@ -26,10 +26,12 @@
 
 .bad-guy-info {
     margin-top: 10px;
+    padding: 10px 10px;
     border-top: 1px solid grey;
 }
 .buttons {
     width: 100%;
+    padding: 10px 10px;
 }
 .release-btn {
     margin: 20px 0 10px;

@@ -9,7 +9,7 @@ export const AddGuy = ({addGuy}) => {
                 <input name="name" type="text" placeholder="Enter a new guy name"></input>
                 <input name="city" type="text" placeholder="Enter City"></input>
                 <input name="gang" type="text" placeholder="Enter a guy Gang name"></input>
-                <input type="submit" value="Add +"/>
+                <input className="addBtn" type="submit" value="Add +"/>
             </form> 
         </div>
     )
