@@ -3,11 +3,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
+// Components
 import {Header} from './components/header/header-component';
 import {CardList} from './components/card-list/card-list-component';
 import {SearchBox} from './components/search-box/search-box-component';
 import {AddGuy} from './components/add-guy/Add-guy-component';
-import { GuyProfile } from './components/guy-profile/guy-profile-componenet';
+import { HomePage } from './pages/home-page/Home-page.page';
+import { BadguyProfile } from './pages/badguy-profile-page/Badguy-profile.page';
 
 class App extends Component {
   constructor() {
@@ -63,10 +65,15 @@ class App extends Component {
       <BrowserRouter>
         <div className="wrapper">
             <Header title={'Bad Guys List'} />
-            <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
+            {/* <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
             <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
-            <AddGuy addGuy={this.addGuyHandler}/>
-      </div>
+            <AddGuy addGuy={this.addGuyHandler}/> */}
+          <Switch>
+            {/* <Route path="/" exact component={HomePage} /> */}
+            <Route path="/" exact render={(props)=> (<HomePage {...props} badGuys={this.state.badGuys}/>)} />
+            <Route path="/badguyprofile" render={(props)=> (<BadguyProfile {...props} test={'testowy wpis'}/>)} />
+          </Switch>
+        </div>
       </BrowserRouter>
     )
   }
