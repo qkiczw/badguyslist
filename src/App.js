@@ -5,9 +5,9 @@ import './App.css';
 
 // Components
 import {Header} from './components/header/header-component';
-import {CardList} from './components/card-list/card-list-component';
-import {SearchBox} from './components/search-box/search-box-component';
-import {AddGuy} from './components/add-guy/Add-guy-component';
+// import {CardList} from './components/card-list/card-list-component';
+// import {SearchBox} from './components/search-box/search-box-component';
+// import {AddGuy} from './components/add-guy/Add-guy-component';
 import { HomePage } from './pages/home-page/Home-page.page';
 import { BadguyProfile } from './pages/badguy-profile-page/Badguy-profile.page';
 
@@ -70,7 +70,7 @@ class App extends Component {
             <AddGuy addGuy={this.addGuyHandler}/> */}
           <Switch>
             {/* <Route path="/" exact component={HomePage} /> */}
-            <Route path="/" exact render={(props)=> (<HomePage {...props} badGuys={this.state.badGuys}/>)} />
+            <Route path="/" exact render={(props)=> (<HomePage {...props} badGuys={this.state.badGuys} handleRelease={this.releaseBadGuy}/>)} />
             <Route path="/badguyprofile" render={(props)=> (<BadguyProfile {...props} test={'testowy wpis'}/>)} />
           </Switch>
         </div>
