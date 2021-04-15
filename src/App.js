@@ -71,7 +71,7 @@ class App extends Component {
           <Switch>
             {/* <Route path="/" exact component={HomePage} /> */}
             <Route path="/" exact render={(props)=> (<HomePage {...props} badGuys={this.state.badGuys} handleRelease={this.releaseBadGuy}/>)} />
-            <Route path="/badguy/:id" render={(props)=> (<BadguyProfile {...props}  />)} />
+            <Route path="/badguy/:id" render={(props)=> (<BadguyProfile {...props}  badGuys={this.state.badGuys} />)} />
           </Switch>
         </div>
       </BrowserRouter>
