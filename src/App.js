@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
 import {Header} from './components/header/header-component';
 import {CardList} from './components/card-list/card-list-component';
 import {SearchBox} from './components/search-box/search-box-component';
 import {AddGuy} from './components/add-guy/Add-guy-component';
+import { GuyProfile } from './components/guy-profile/guy-profile-componenet';
 
 class App extends Component {
   constructor() {
@@ -57,12 +60,14 @@ class App extends Component {
     const filteredBadGuys = badGuys.filter( guy => guy.name.toLowerCase().includes(searchField.toLowerCase()));
 
     return (
-      <div className="wrapper">
-        <Header title={'Bad Guys List'} />
-        <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
-        <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
-        <AddGuy addGuy={this.addGuyHandler}/>
+      <BrowserRouter>
+        <div className="wrapper">
+            <Header title={'Bad Guys List'} />
+            <SearchBox  placeholder={`Enter a guy name`} handleChange={ this.filterBadGuys }/>
+            <CardList badGuys={filteredBadGuys} handleRelease={this.releaseBadGuy} />
+            <AddGuy addGuy={this.addGuyHandler}/>
       </div>
+      </BrowserRouter>
     )
   }
 } 
