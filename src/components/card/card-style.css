@@ -32,6 +32,9 @@
 .buttons {
     width: 100%;
     padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .release-btn {
     margin: 20px 0 10px;
@@ -44,4 +47,13 @@
 }
 .release-btn:hover {
     background-color: #e53935;
+}
+.full-profile-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(60, 177, 60);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
 }

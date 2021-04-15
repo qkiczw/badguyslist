@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import './card-style.css'
 
@@ -15,6 +16,7 @@ export const Card = ( {badGuy, handleRelease} ) => {
         </div>
         <div className="buttons">
             <button className="release-btn" onClick={()=> handleRelease(badGuy.id)}>Release</button>
+            <Link to={`badGuy/${badGuy.id}`} className='full-profile-btn'>Full Profile</Link>
         </div>
     </div>
     )
