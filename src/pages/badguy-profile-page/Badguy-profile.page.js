@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './badguy-profile.styles.css'
 
 
@@ -28,6 +29,8 @@ export const BadguyProfile = (props) => {
                 <p>email: {badGuy.email}</p>
                 <p>phone: {badGuy.phone}</p>
             </div>
+            <Link to={'/'} className='back-btn'>Back to List</Link>
+            
         </div>
     )
 }

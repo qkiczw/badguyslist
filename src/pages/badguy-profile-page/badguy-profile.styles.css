@@ -3,3 +3,10 @@
     width: 90%;
     
 }
+.back-btn {
+    background-color: salmon;
+    padding: 7px 15px;
+}
+a {
+    margin-top: 50px;
+}
