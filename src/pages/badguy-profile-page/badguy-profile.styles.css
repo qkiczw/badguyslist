@@ -1,12 +1,35 @@
 .bad-guy-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
     margin: 50px 0;
     width: 90%;
+    min-height: 80vh ;
     
 }
-.back-btn {
-    background-color: salmon;
-    padding: 7px 15px;
+.bad-guy-photo {
+    border: 2px solid black;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fpolice-mugshot-vector-police-lineup-isolated-white-background-illustration-wall-metrical-imperial-prison-template-94555169.jpg&f=1&nofb=1');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
-a {
+.bad-guy-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.back-btn-section {
     margin-top: 50px;
+}
+.back-btn, .back-btn:visited, .back-btn:link {
+    background-color: rgb(76, 168, 64);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.back-btn:hover {
+    background-color: rgb(57, 136, 47);
 }
