@@ -9,7 +9,7 @@ import './card-list-style.css';
 
 
 
-export const CardList = ( props ) => {
+const CardList = ( props ) => {
     return(
         <>
             <div className="card-list">
@@ -21,3 +21,5 @@ export const CardList = ( props ) => {
         </>
     )
 }
+
+export default CardList;
